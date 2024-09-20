@@ -1,0 +1,133 @@
+Microsoft Windows [Versión 10.0.19045.4529]
+(c) Microsoft Corporation. Todos los derechos reservados.
+
+C:\Users\Estudiante>git --version
+git version 2.46.1.windows.1
+
+C:\Users\Estudiante>cd Desktop/Programacion
+
+C:\Users\Estudiante\Desktop\Programacion>git init
+Reinitialized existing Git repository in C:/Users/Estudiante/Desktop/Programacion/.git/
+
+C:\Users\Estudiante\Desktop\Programacion>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        U1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\Estudiante\Desktop\Programacion>git add .
+
+C:\Users\Estudiante\Desktop\Programacion>git commit -m "Hi World"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'Estudiante@LAB-01.(none)')
+
+C:\Users\Estudiante\Desktop\Programacion>git config --global user.email "kcarvajalc5@est.ups.edu.ec"
+
+C:\Users\Estudiante\Desktop\Programacion>git config --global user.name "Key y Steve"
+
+C:\Users\Estudiante\Desktop\Programacion>git commit -m "Hi World"
+[master (root-commit) ba1dbcf] Hi World
+ 1 file changed, 1 insertion(+)
+ create mode 100644 U1.txt
+
+C:\Users\Estudiante\Desktop\Programacion>git log --online
+fatal: unrecognized argument: --online
+
+C:\Users\Estudiante\Desktop\Programacion>git log --oneline
+ba1dbcf (HEAD -> master) Hi World
+
+C:\Users\Estudiante\Desktop\Programacion>git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   U1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        U2.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\Estudiante\Desktop\Programacion>git add .
+
+C:\Users\Estudiante\Desktop\Programacion>git commit -m "Punto 2"
+[master c05a918] Punto 2
+ 2 files changed, 3 insertions(+), 1 deletion(-)
+ create mode 100644 U2.txt
+
+C:\Users\Estudiante\Desktop\Programacion>git log --oneline
+c05a918 (HEAD -> master) Punto 2
+ba1dbcf Hi World
+
+C:\Users\Estudiante\Desktop\Programacion>git checkout ba1dbcf
+Note: switching to 'ba1dbcf'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at ba1dbcf Hi World
+
+C:\Users\Estudiante\Desktop\Programacion>git checkout c05a918
+Previous HEAD position was ba1dbcf Hi World
+HEAD is now at c05a918 Punto 2
+
+C:\Users\Estudiante\Desktop\Programacion>git branch -M main
+fatal: cannot rename the current branch while not on any
+
+C:\Users\Estudiante\Desktop\Programacion>git branch
+* (HEAD detached at c05a918)
+  master
+
+C:\Users\Estudiante\Desktop\Programacion>git checkout master
+Switched to branch 'master'
+
+C:\Users\Estudiante\Desktop\Programacion>git branch -M main
+
+C:\Users\Estudiante\Desktop\Programacion>git remote add origin https://github.com/KeyySteve/icc-pro-01-practicaGit.git
+
+C:\Users\Estudiante\Desktop\Programacion>git push -u origin main
+info: please complete authentication in your browser...
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (7/7), 523 bytes | 523.00 KiB/s, done.
+Total 7 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/KeyySteve/icc-pro-01-practicaGit.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+C:\Users\Estudiante\Desktop\Programacion>git push -u origin main
+branch 'main' set up to track 'origin/main'.
+Everything up-to-date
+
+C:\Users\Estudiante\Desktop\Programacion>
